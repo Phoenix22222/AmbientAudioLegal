@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ambient Audio Support</title>
+  <meta name="description" content="Support information for Ambient Audio.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f9fb;
+      --text: #14212b;
+      --muted: #53616d;
+      --panel: #ffffff;
+      --line: #dfe7ee;
+      --accent: #087e8b;
+      --accent-strong: #075f68;
+      --warm: #f2b84b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101418;
+        --text: #eef4f7;
+        --muted: #a9b6bf;
+        --panel: #182026;
+        --line: #2b3740;
+        --accent: #35c2d0;
+        --accent-strong: #8be8f0;
+        --warm: #ffd166;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(880px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    header {
+      margin-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+    }
+
+    .mark {
+      display: inline-grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      line-height: 1.18;
+    }
+
+    h1 {
+      max-width: 12em;
+      font-size: 40px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin-top: 34px;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent-strong);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .intro {
+      max-width: 680px;
+      font-size: 18px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .contact strong {
+      color: var(--text);
+    }
+
+    .button {
+      display: inline-block;
+      width: fit-content;
+      margin-top: 6px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .faq article {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .faq h3 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    footer {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 24px, 880px);
+        padding: 34px 0;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="mark" aria-hidden="true">A</div>
+      <h1>Ambient Audio Support</h1>
+      <p class="intro">Need help with sounds, sleep tracking, recordings, wake alarms, or Apple Health access? Send a note and we will help.</p>
+    </header>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="contact">
+        <p><strong>Email:</strong> <a href="mailto:support@ambientaudio.app">support@ambientaudio.app</a></p>
+        <p>For the fastest help, include your device model, iOS version, Ambient Audio app version, and a short description of what happened.</p>
+        <a class="button" href="mailto:support@ambientaudio.app?subject=Ambient%20Audio%20Support">Email Support</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="help-heading">
+      <h2 id="help-heading">Common Questions</h2>
+      <div class="faq">
+        <article>
+          <h3>Audio is not playing</h3>
+          <p>Check that your device volume is up, Silent Mode is off if needed, and no other app is holding audio output. Try stopping all sounds in Ambient Audio and starting a new mix.</p>
+        </article>
+
+        <article>
+          <h3>Sleep recording is not available</h3>
+          <p>Sleep audio recording requires microphone permission. You can review permissions in the Settings app under Ambient Audio.</p>
+        </article>
+
+        <article>
+          <h3>Apple Health data is not syncing</h3>
+          <p>Apple Health access is optional and controlled by iOS. Open the Health app or Settings app to confirm Ambient Audio has permission for the sleep data you want to use.</p>
+        </article>
+
+        <article>
+          <h3>How do I delete saved data?</h3>
+          <p>Open Ambient Audio, go to Settings, then use Delete Saved Data. This removes local saved data from the device.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">Privacy And Terms</h2>
+      <ul>
+        <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Last updated: April 16, 2026</p>
+      <p>Ambient Audio</p>
+    </footer>
+  </main>
+</body>
+</html>
